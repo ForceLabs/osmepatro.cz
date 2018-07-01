@@ -1,0 +1,117 @@
+$section-small-margin-top: 5%;
+
+.navbar {
+    display: flex;
+    .navbar-toggler {
+    border: 0;
+    
+}
+}
+
+
+.navbar {
+    max-width: 1140px;
+    background-color: white;
+    margin-right: auto;
+        margin-left: auto;
+        .navbar-nav {
+            font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+            font-weight: 300;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            
+            
+            ul {
+                list-style-type: none;
+            }
+            .nav-item {
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+
+            a, {
+                color: black;
+            } 
+            a:hover {
+                color: darkgray;
+            }   
+        }
+}
+
+.homepage,{
+    .section {
+        margin-top: 12%;
+    }
+    h2 {
+        margin-bottom: 2%;
+    }
+    .section-small {
+        margin-top: $section-small-margin-top;
+    }
+}
+
+.vission, .contact, .investice, .property {
+    .section {
+        margin-top: 5%;
+    }
+    .section-small {
+        margin-top: $section-small-margin-top;
+    }
+    h2 {
+        margin-bottom: 2%;
+    }
+}
+
+.blog {
+    .row {
+        margin-top: 2%;
+    }
+    a {
+        color: rgba(0, 0, 0, 0.7);
+        text-decoration: underline;
+        font-weight: 700;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.post-section {
+    .post-header {
+        margin-bottom: 3%;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 60%;
+        
+    }
+    .cta {
+        margin-top: 3%;
+        margin-bottom: 7%;
+    }
+    .post-body {
+        text-align: justify;
+    }
+    
+}
+
+.footer {
+    margin: 5%;
+    .section {
+        .col {
+            ul {
+                list-style-type: none;
+            }
+        }
+    }
+    a {
+        color: #212529;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}

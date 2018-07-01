@@ -1,0 +1,51 @@
+<!-- Begin Blog-->
+<section class="container blog">
+    <div class="row content-wrapper text-left">
+        <div class="col-md-12 col-sm-12">
+            <h3>{{ site.blogTitle }}</h3>
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                {% for post in site.posts %}
+                    <article>
+                        <div class="row post-title">
+                            <div class="col col-md-12">
+                                <a href="{{ site.baseurl | append: post.url }}" title="{{ post.title }}"><h4>{{ post.title }}</h4></a>
+                            </div>
+                        </div>
+                        <div class="row post-caption published">
+                            <div class="col col-md-12">
+                                    <span class="caption"><i class="far fa-calendar-alt"></i></span>
+                                    <span class="publish-date" itemprop="datePublished">{{ post.date | date: "%-d.%-m. %Y" }}{% if post.author %} <i class="far fa-user"></i> {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</span>
+                                    <span class="read-time" itemprop="readTime">{% if post.read %} <i class="far fa-clock"></i> {{ post.read }}{% endif %}</span>
+                            </div>
+                        </div>
+                        <div class="row post-body">
+                            <div class="col col-md-12">
+                                <p>{{ post.content | strip_html | truncate: 350 }} <a href="{{ site.baseurl | append: post.url }}">celý článek</a></p>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %} 
+
+                {% if paginator.total_pages > 1 %}
+                <div class="row">
+                    <div class="pagination">
+                        {% if paginator.previous_page %}
+                        <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+                        {% else %}
+                        <span class="previous">Previous</span>
+                        {% endif %}
+                        <span class="page-number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+                        {% if paginator.next_page %}
+                        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+                        {% else %}
+                        <span class="next ">Next</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Blog -->

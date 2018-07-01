@@ -1,0 +1,33 @@
+# Site settings
+title:
+email:
+author:
+description:
+baseurl: ""
+url: "https://osmepatro.cz" # the base hostname & protocol for your site
+site.url: "https://osmepatro.cz"
+
+plugins:
+  - jekyll-sitemap
+
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: css
+
+# Navigation
+navigationLinks:
+ - {permalink: "/investice/", text: "Investice"}
+ - {permalink: "/vize/", text: "Vize"}
+ #- {permalink: "/nemovitosti/", text: "Nemovitosti"}
+ #- {permalink: "/rizika/", text: "Rizika"}
+ - {permalink: "/blog/", text: "Blog"}
+ - {permalink: "/kontakt/", text: "Kontakt"}
+
+
+exclude:
+  - CNAME
+  - README
+  - '*.json'
+  - .DS_Store

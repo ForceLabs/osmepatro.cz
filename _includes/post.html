@@ -1,0 +1,49 @@
+<!-- Begin Post-->
+<section id="post-section" class="container post-section">
+    <div class="rowc text-left">
+        <div class="col col-md-12">
+            <article class="row post">
+                <div class="col col-md-12">
+                        <div class="row post-header">
+                                <div class="col col-md-12">
+                                    <span class="caption"><i class="far fa-calendar-alt"></i></strong></span>
+                                    <span class="publish-date" itemprop="datePublished">{{ page.date | date: "%-d.%-m. %Y" }}{% if page.author %} <i class="far fa-user"></i> {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+                                    <span class="read-time" itemprop="readTime">{% if page.read %} <i class="far fa-clock"></i> {{ page.read }}{% endif %}</span>
+                                </div>
+                            </div>
+                    <div class="row post-body">
+                        <div class="col col-md-12">
+                        {{ content }}
+                        </div>
+                    </div>
+                    <div class="row post-share">
+                        <div class="col col-md-12">
+                            <div class="fb-share-button"
+                                data-href="{{ page.url | prepend: site.baseurl }}"
+                                data-layout="button"
+                                data-size="small"
+                                data-mobile-iframe="false">
+                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A4000%2Fblog%2Freality%2F2018%2F07%2F04%2F9PATRO-jak-do-nej-investovat&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row page-navigation">
+                        <div class="next col col-xs-6">
+                            {% if page.next.url %}
+                                <a href="{{ page.next.url | prepend: site.baseurl }}" title="{{ page.next.title | strip_html }}">&laquo; {{page.next.title | strip_html | truncate: 15 }}</a>
+                            {% endif %}
+                        </div>
+                        <div class="previous col col-xs-6 text-right">
+                            {% if page.previous.url %}
+                                <a href="{{ page.previous.url | prepend: site.baseurl }}" title="{{ page.previous.title | strip_html }}">{{page.previous.title | strip_html | truncate: 15 }} &raquo;</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- End Post -->
